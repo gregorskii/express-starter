@@ -16,6 +16,15 @@ Start mongo with its DB path in the `./data` folder:
 mongod --dbpath ./data/
 ```
 
+Create a `.env` file in the root:
+
+```
+MONGO_DB_URL=mongodb://localhost/express/starter
+CORS_WHITELIST=http://localhost:8080,http://localhost:3000
+```
+
+Replace `/express/starter` with your db and table name.
+
 Start the API:
 
 ```
