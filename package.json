@@ -1,5 +1,5 @@
 {
-  "name": "gql-users",
+  "name": "express-starter",
   "version": "1.0.0",
   "description": "Simple Express Starter with Babel and Eslint",
   "main": "index.js",
