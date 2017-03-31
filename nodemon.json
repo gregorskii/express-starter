@@ -1,0 +1,17 @@
+{
+  "restartable": "rs",
+  "verbose": false,
+  "ignore": [
+    ".git",
+    "node_modules/**"
+  ],
+  "execMap": {
+    "js": "node ./{{filename}}"
+  },
+  "watch": [
+    "*.js",
+    ".env",
+    "package.json"
+  ],
+  "ext": "js json"
+}
