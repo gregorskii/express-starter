@@ -1,21 +1,14 @@
 import express from 'express';
 import http from 'http';
-import bodyParser from 'body-parser';
-import bunyanMiddleware from 'bunyan-middleware';
-import cors from 'cors';
-import routes from './routes';
+
 import { logger } from './interfaces';
+import routes from './routes';
+import services from './services';
 
 const app = express();
 
-const whitelist = process.env.CORS_WHITELIST.split(',');
-const corsOptions = { origin: whitelist };
-
-// App setup
-app.use(bunyanMiddleware(logger));
-app.use(bodyParser.json({ type: '*/*' }));
-app.use(cors(corsOptions));
-
+// App Setup
+services(app);
 routes(app);
 
 // Server setup
